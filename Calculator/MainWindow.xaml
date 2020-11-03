@@ -1,0 +1,54 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="430" Width="340" FontSize="16" WindowStyle="SingleBorderWindow" ShowInTaskbar="True" fw:AcrylicWindow.Enabled="True" fw:AcrylicWindow.AcrylicWindowStyle="NoIcon">
+
+	<Window.Effect>
+		<DropShadowEffect/>
+	</Window.Effect>
+	<Grid x:Name="MainGrid" fw:PointerTracker.Enabled="True">
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+
+
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<TextBlock x:Name="TextBlock" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="1" Foreground="White"/>
+		<Button Grid.Column="0" Grid.Row="2" Content="CE" Background="#FF1B1B1B" Foreground="White"  Style="{StaticResource ButtonRevealStyle}" />
+		<Button Grid.Column="1" Grid.Row="2" Content="C" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="2" Grid.Row="2" Content="←" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="3" Grid.Row="2" Content="÷" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="0" Grid.Row="3" Content="7" Background="Black" Foreground="White" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="1" Grid.Row="3" Content="8" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="2" Grid.Row="3" Content="9" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="3" Grid.Row="3" Content="x" Foreground="White" Background="#FF1B1B1B" OpacityMask="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="0" Grid.Row="4" Content="4" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="1" Grid.Row="4" Content="5" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="2" Grid.Row="4" Content="6" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="3" Grid.Row="4" Content="-" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="0" Grid.Row="5" Content="1" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="1" Grid.Row="5" Content="2" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="2" Grid.Row="5" Content="3" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="3" Grid.Row="5" Content="+" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="0" Grid.Row="6" Content="x²" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="1" Grid.Row="6" Content="0" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="2" Grid.Row="6" Content="," Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="3" Grid.Row="6" Content="=" Foreground="White" Background="#FF726617" Style="{StaticResource ButtonRevealStyle}"/>
+	</Grid>
+</Window>
