@@ -13,7 +13,7 @@ xmlns:local="clr-namespace:Calculator"
 	</Window.Effect>
 	<Grid x:Name="MainGrid" fw:PointerTracker.Enabled="True">
 		<Grid.RowDefinitions>
-			<RowDefinition></RowDefinition>
+			<RowDefinition Height="0.5*"></RowDefinition>
 			<RowDefinition></RowDefinition>
 			<RowDefinition></RowDefinition>
 			<RowDefinition></RowDefinition>
@@ -29,26 +29,27 @@ xmlns:local="clr-namespace:Calculator"
 			<ColumnDefinition></ColumnDefinition>
 			<ColumnDefinition></ColumnDefinition>
 		</Grid.ColumnDefinitions>
-		<TextBlock x:Name="TextBlock" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="1" Foreground="White"/>
-		<Button Grid.Column="0" Grid.Row="2" Content="CE" Background="#FF1B1B1B" Foreground="White"  Style="{StaticResource ButtonRevealStyle}" />
-		<Button Grid.Column="1" Grid.Row="2" Content="C" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}"/>
-		<Button Grid.Column="2" Grid.Row="2" Content="←" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}"/>
-		<Button Grid.Column="3" Grid.Row="2" Content="÷" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}"/>
+		<TextBlock x:Name="TextBlock" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Foreground="#FF8F8F8F" FontSize="18"/>
+		<TextBlock x:Name="TextBlock2" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" Foreground="White" FontSize="26"/>
+		<Button Name="Button_ce" Grid.Column="0" Grid.Row="2" Content="CE" Background="#FF1B1B1B" Foreground="White"  Style="{StaticResource ButtonRevealStyle}" Click="Button_Click_ce" />
+		<Button Name="Button_c" Grid.Column="1" Grid.Row="2" Content="C" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}" Click="Button_Click_c" />
+		<Button Name="Button_back" Grid.Column="2" Grid.Row="2" Content="←" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}" Click="Button_Click_back" />
+		<Button Grid.Column="3" Grid.Row="2" Content="÷" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}" FontSize="24" />
 		<Button Grid.Column="0" Grid.Row="3" Content="7" Background="Black" Foreground="White" Style="{StaticResource ButtonRevealStyle}"/>
 		<Button Grid.Column="1" Grid.Row="3" Content="8" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
 		<Button Grid.Column="2" Grid.Row="3" Content="9" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
-		<Button Grid.Column="3" Grid.Row="3" Content="x" Foreground="White" Background="#FF1B1B1B" OpacityMask="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="3" Grid.Row="3" Content="x" Foreground="White" Background="#FF1B1B1B" OpacityMask="Black" Style="{StaticResource ButtonRevealStyle}" FontSize="24" />
 		<Button Grid.Column="0" Grid.Row="4" Content="4" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
 		<Button Grid.Column="1" Grid.Row="4" Content="5" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
 		<Button Grid.Column="2" Grid.Row="4" Content="6" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
-		<Button Grid.Column="3" Grid.Row="4" Content="-" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="3" Grid.Row="4" Content="-" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}" FontSize="24" />
 		<Button Grid.Column="0" Grid.Row="5" Content="1" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
 		<Button Grid.Column="1" Grid.Row="5" Content="2" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
 		<Button Grid.Column="2" Grid.Row="5" Content="3" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
-		<Button Grid.Column="3" Grid.Row="5" Content="+" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}"/>
-		<Button Grid.Column="0" Grid.Row="6" Content="x²" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
+		<Button Grid.Column="3" Grid.Row="5" Content="+" Foreground="White" Background="#FF1B1B1B" Style="{StaticResource ButtonRevealStyle}" FontSize="24" />
+		<Button Grid.Column="0" Grid.Row="6" Content="," Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
 		<Button Grid.Column="1" Grid.Row="6" Content="0" Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
-		<Button Grid.Column="2" Grid.Row="6" Content="," Foreground="White" Background="Black" Style="{StaticResource ButtonRevealStyle}"/>
-		<Button Grid.Column="3" Grid.Row="6" Content="=" Foreground="White" Background="#FF726617" Style="{StaticResource ButtonRevealStyle}"/>
+		
+		<Button Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="6" Content="=" Foreground="White" Background="#FF726617" Style="{StaticResource ButtonRevealStyle}" FontSize="24" />
 	</Grid>
 </Window>
